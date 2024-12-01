@@ -1,0 +1,44 @@
+﻿@model Lead
+
+@{
+    ViewBag.Title = "Create Lead";
+}
+
+<h2>Create Lead</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="LeadDate">Lead Date</label>
+        @Html.TextBoxFor(model => model.LeadDate, new { @class = "form-control", @type = "date" })
+    </div>
+    <div class="form-group">
+        <label for="Name">Name</label>
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @type = "email" })
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="LeadSource">Lead Source</label>
+        @Html.TextBoxFor(model => model.LeadSource, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="LeadStatus">Lead Status</label>
+        @Html.TextBoxFor(model => model.LeadStatus, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="NextFollowUpDate">Next Follow Up Date</label>
+        @Html.TextBoxFor(model => model.NextFollowUpDate, new { @class = "form-control", @type = "date" })
+    </div>
+    <div class="d-flex justify-content-lg-start mt-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button asp-action="index" class="btn btn-secondary mx-3">back to list</button>
+    </div>
+}
+
