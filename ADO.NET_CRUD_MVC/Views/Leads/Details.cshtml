@@ -1,0 +1,44 @@
+﻿@model Lead
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mt-5">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Lead Information</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Id)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Id)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.LeadDate)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.LeadDate)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Name)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Email)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Phone)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Phone)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.LeadSource)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.LeadSource)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.LeadStatus)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.LeadStatus)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NextFollowUpDate)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NextFollowUpDate)</dd>
+            </dl>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" href="@Url.Action("Edit", new { id = Model.Id })">Edit</a>
+            <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
